@@ -17,9 +17,9 @@ class AIResumeAnalyzer:
         # Load environment variables
         load_dotenv()
         
-                # Configure Hugging Face API via OpenAI client
-        self.hf_token = os.getenv("HF_TOKEN")
-        self.openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
+        # Configure Hugging Face API via OpenAI client
+        self.hf_token = os.getenv("HF_TOKEN") or st.secrets.get("HF_TOKEN")
+        self.openrouter_api_key = os.getenv("OPENROUTER_API_KEY") or st.secrets.get("OPENROUTER_API_KEY")
         
         if self.hf_token:
             self.client = OpenAI(
