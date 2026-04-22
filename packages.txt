@@ -1,3 +1,6 @@
 chromium
 chromium-driver
 xvfb
+poppler-utils
+tesseract-ocr
+libgl1-mesa-glx
